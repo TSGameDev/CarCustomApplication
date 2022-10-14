@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c65a5012dce2d41ad4c07618733af6, type: 3}
+  m_Name: High Performance Tyres
+  m_EditorClassIdentifier: 
+  modificationMat: {fileID: 2100000, guid: 6ef529dde2c254747a1e4b7a941bf4e7, type: 2}
+  modficationPrice: 50
+  carModificationName: High Performance Tyres
+  carModificationDescription: "High performance tyres are tyres that have been optimised
+    to provide quick \nresponse, enhanced grip and the ability to cope with high
+    speed. These tyres \nare created by premium manufacturers which have derived
+    extensive research \nand technology from their time in the motorsport segment."

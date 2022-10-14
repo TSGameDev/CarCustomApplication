@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c65a5012dce2d41ad4c07618733af6, type: 3}
+  m_Name: Red Interior
+  m_EditorClassIdentifier: 
+  modificationMat: {fileID: 2100000, guid: 3cbd0aa37a0a478479a2f1d7bfe559e4, type: 2}
+  modficationPrice: 50
+  carModificationName: Modified Red Interior
+  carModificationDescription: A compeltely red interior modified to provide better
+    comfort for long rides.

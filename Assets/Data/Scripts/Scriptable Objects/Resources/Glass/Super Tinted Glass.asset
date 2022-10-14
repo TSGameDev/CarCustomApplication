@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c65a5012dce2d41ad4c07618733af6, type: 3}
+  m_Name: Super Tinted Glass
+  m_EditorClassIdentifier: 
+  modificationMat: {fileID: 2100000, guid: b89c7b12ced74684e8efec2a0010b393, type: 2}
+  modficationPrice: 40
+  carModificationName: Super Tinted Glass
+  carModificationDescription: 'Very dark tinted glass for the extra sleak look
+
+    and
+    block out the sun.'

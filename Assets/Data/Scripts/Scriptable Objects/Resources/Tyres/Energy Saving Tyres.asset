@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c65a5012dce2d41ad4c07618733af6, type: 3}
+  m_Name: Energy Saving Tyres
+  m_EditorClassIdentifier: 
+  modificationMat: {fileID: 2100000, guid: 64e605780271ba942a4469f407263309, type: 2}
+  modficationPrice: 20
+  carModificationName: Energy Saving Tyre
+  carModificationDescription: "Energy saving tyres are tyres that have been built
+    specifically to have low levels\n of rolling resistance to reduce fuel consumption,
+    resulting in better fuel economy\n for motorists and a decrease in the associated
+    CO2 emissions. Most major tyre\n manufacturers create energy saving tyres which
+    have been designed to lower \nfuel consumption."

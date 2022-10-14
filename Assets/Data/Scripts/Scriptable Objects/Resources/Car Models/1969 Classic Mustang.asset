@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892d102002b2a714c8a559da00d62e5a, type: 3}
+  m_Name: 1969 Classic Mustang
+  m_EditorClassIdentifier: 
+  carModlePrefab: {fileID: 2139645596133741514, guid: 3265c51107ec9bc408a482ef4eb9d119,
+    type: 3}
+  price: 3600
+  carName: 1969 Classic Mustang
+  carDescription: 'A beautiful convertable with unique low-laying headlights. Sleek
+    body with great
+
+    aerodynamics'
+  carStats: 'Front engine of 320 horse power, weight of 1476kg with Rear wheel drive
+    and
+
+    a 3 manual transmission.'
