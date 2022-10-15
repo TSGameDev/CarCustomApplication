@@ -25,3 +25,12 @@ MonoBehaviour:
     transmission.
 
     comes in at a weight of 1110kg.'
+  carExteriorModifications:
+  - {fileID: 11400000, guid: 8f53db696636a994cae83ecf98bd3bb7, type: 2}
+  - {fileID: 11400000, guid: cdfd3734567251444ab0f07f9a7d5d7a, type: 2}
+  - {fileID: 11400000, guid: e0077241409520446b8622163e615d90, type: 2}
+  - {fileID: 11400000, guid: e83c6d7db1e19ce43aaeac1d575dcc53, type: 2}
+  carInteriorModifications:
+  - {fileID: 11400000, guid: 2feb195fc91660b4cad8a064d89c8ab3, type: 2}
+  - {fileID: 11400000, guid: 65091e50492d43646bd287dc74fe8677, type: 2}
+  - {fileID: 11400000, guid: 522ad6cb4a6a46c438e4d9ca3a76a2ea, type: 2}

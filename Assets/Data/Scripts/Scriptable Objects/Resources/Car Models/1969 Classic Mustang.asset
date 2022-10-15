@@ -24,3 +24,8 @@ MonoBehaviour:
     and
 
     a 3 manual transmission.'
+  carExteriorModifications:
+  - {fileID: 11400000, guid: 9ff242461105797489097d855da9c8e6, type: 2}
+  carInteriorModifications:
+  - {fileID: 11400000, guid: f4b1b61819c078948a1c39fd44c85ca4, type: 2}
+  - {fileID: 11400000, guid: c899460395851014382e01a4756c3031, type: 2}

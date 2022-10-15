@@ -27,3 +27,11 @@ MonoBehaviour:
     of 1318kg
 
     with a 3 gear manual transmission.'
+  carExteriorModifications:
+  - {fileID: 11400000, guid: 45d14d6666a80624a98be9f763dea57f, type: 2}
+  - {fileID: 11400000, guid: 59fe0e3747a28f84bb1d2bca067efddd, type: 2}
+  - {fileID: 11400000, guid: 46876bf43cc237e45ab4ce375fd70acf, type: 2}
+  - {fileID: 11400000, guid: 5b994871b5864c44788d09bb77c067a1, type: 2}
+  carInteriorModifications:
+  - {fileID: 11400000, guid: 5d5dc66868fccc94292017fa331e4b63, type: 2}
+  - {fileID: 11400000, guid: 7cb47c5beb0bbe34d9d1bc0cb64924bc, type: 2}

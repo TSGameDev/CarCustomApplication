@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5283236fdc1bf4e8fb1c4f7344765b, type: 3}
+  m_Name: Database
+  m_EditorClassIdentifier: 
+  carModelDatabase:
+  - {fileID: 11400000, guid: dd582d18a84472047a0997b1a79a1bc3, type: 2}
+  - {fileID: 11400000, guid: b9c344ee2cf5c034eaa14cb2fab14366, type: 2}
+  - {fileID: 11400000, guid: 2d7e0c06ae58b884ca8b4ab3345f39c5, type: 2}
+  carTyreDatabase:
+  - {fileID: 11400000, guid: d2190a54e46015e49bbef95e5e5d7042, type: 2}
+  - {fileID: 11400000, guid: c78bcc96a048ddb429fb6b8005cdf174, type: 2}
+  - {fileID: 11400000, guid: 057cb46a0e7ac874286129d4d56879d9, type: 2}
+  - {fileID: 11400000, guid: 658f882fe032d9a44afe69c95b910948, type: 2}
+  - {fileID: 11400000, guid: 7f2c47e0aee44da4b9f95d71250e415e, type: 2}
+  carGlassDatabase:
+  - {fileID: 11400000, guid: f9b966983fedf8646a039f12cd075d66, type: 2}
+  - {fileID: 11400000, guid: 961f411ecf233ea429ef8d61c75a3619, type: 2}
+  - {fileID: 11400000, guid: 98fc26b9d31578e4cb157012f5edd564, type: 2}
+  - {fileID: 11400000, guid: 2feed7b4512c76e4a80fb747fea545d4, type: 2}

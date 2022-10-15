@@ -5,11 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Car Model", menuName = "New Car Model", order = 0)]
 public class CarModelSO : ScriptableObject
 {
-    [SerializeField] GameObject carModlePrefab;
-    [SerializeField] int price;
-    [SerializeField] string carName;
+    public GameObject carModlePrefab;
+    public int price;
+    public string carName;
     [Multiline]
-    [SerializeField] string carDescription;
+    public string carDescription;
     [Multiline]
-    [SerializeField] string carStats;
+    public string carStats;
+    public List<CarModificationSO> carExteriorModifications;
+    public List<CarModificationSO> carInteriorModifications;
+
 }

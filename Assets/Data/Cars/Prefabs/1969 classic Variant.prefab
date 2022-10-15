@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 484538217}
   m_Layer: 0
   m_Name: 1969 classic tire (3)
-  m_TagString: Untagged
+  m_TagString: CarTyre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1066474521}
   m_Layer: 0
   m_Name: 1969 classic tire (1)
-  m_TagString: Untagged
+  m_TagString: CarTyre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2093379346}
   m_Layer: 0
   m_Name: 1969 classic tire (2)
-  m_TagString: Untagged
+  m_TagString: CarTyre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,11 +311,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7574179117473322878, guid: da81b53df1cd2cb47984aaf3e6407160,
+        type: 3}
+      propertyPath: m_TagString
+      value: CarInterior
+      objectReference: {fileID: 0}
     - target: {fileID: -4840253242912148073, guid: da81b53df1cd2cb47984aaf3e6407160,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bec48174287a4944d868a5ce3aa866d0, type: 2}
+    - target: {fileID: -186596460699436639, guid: da81b53df1cd2cb47984aaf3e6407160,
+        type: 3}
+      propertyPath: m_TagString
+      value: CarBody
+      objectReference: {fileID: 0}
     - target: {fileID: 785324037025872555, guid: da81b53df1cd2cb47984aaf3e6407160,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -336,11 +346,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c797c56ec3696604ba33c0c6b8107242, type: 2}
+    - target: {fileID: 3236339592034595933, guid: da81b53df1cd2cb47984aaf3e6407160,
+        type: 3}
+      propertyPath: m_TagString
+      value: CarGlass
+      objectReference: {fileID: 0}
     - target: {fileID: 6702564903258441620, guid: da81b53df1cd2cb47984aaf3e6407160,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2d47749834f0caf4da406582404269f0, type: 2}
+    - target: {fileID: 9204703225950383592, guid: da81b53df1cd2cb47984aaf3e6407160,
+        type: 3}
+      propertyPath: m_TagString
+      value: CarTyre
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da81b53df1cd2cb47984aaf3e6407160, type: 3}
 --- !u!4 &1655738040959076720 stripped
