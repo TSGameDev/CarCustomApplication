@@ -1,21 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ApplicationManager : MonoBehaviour
 {
+    [HideInInspector]
     public CarModelSO currentSelectedCar;
+    [HideInInspector]
+    public CarModificationSO currentSelectedExterior;
+    [HideInInspector]
+    public CarModificationSO currentSelectedInterior;
+    [HideInInspector]
+    public CarModificationSO currentSelectedGlass;
+    [HideInInspector]
+    public CarModificationSO currentSelectedTyres;
 
+    [Tooltip("The prefab of the button that is used to select an option")]
     [SerializeField] GameObject selectionPrefab;
+    [Tooltip("The spawnpoint for car models")]
     [SerializeField] Transform carModelSpawnPoint;
-
+    [Tooltip("List of all selection menus")]
     [SerializeField] List<GameObject> uiMenus;
+    [Tooltip("The starting active UI")]
     [SerializeField] GameObject currentUI;
-    public int menuNumber = 0;
+    [Tooltip("The title text for hovering a selection")]
+    [SerializeField] TextMeshProUGUI itemTitle;
+    [Tooltip("The description text for hovering a selection")]
+    [SerializeField] TextMeshProUGUI itemDescription;
+    [Tooltip("Cost Handler script reliable for updating costs")]
+    [SerializeField] CostHandler costHandler;
+
+    private int menuNumber = 0;
 
     private GameObject currentCarModel;
     private GameObject currentCarExterior;
@@ -38,7 +59,15 @@ public class ApplicationManager : MonoBehaviour
                 currentCarModel = Temp;
                 currentSelectedCar = carModel;
                 DefiningCarParts();
+                costHandler.UpdateCarCost(carModel);
             });
+
+            OnPointerEnterExit pointerEvent = creation.GetComponent<OnPointerEnterExit>();
+            pointerEvent.PointerEnterDelegate += () =>
+            {
+                itemTitle.text = $"{carModel.carName} - ${carModel.price}";
+                itemDescription.text = $"{carModel.carDescription}.{Environment.NewLine}{carModel.carStats}."; 
+            };
         }
     }
 
@@ -80,25 +109,39 @@ public class ApplicationManager : MonoBehaviour
                     case ModType.Exterior:
                         currentCarRenderer = currentCarExterior.GetComponent<MeshRenderer>();
                         currentCarRenderer.material = carMod.modificationMat;
+                        costHandler.UpdateModificationCost(carMod, mod);
+                        currentSelectedExterior = carMod;
                         break;
                     case ModType.Interior:
                         currentCarRenderer = currentCarInterior.GetComponent<MeshRenderer>();
                         currentCarRenderer.material = carMod.modificationMat;
+                        costHandler.UpdateModificationCost(carMod, mod);
+                        currentSelectedInterior = carMod;
                         break;
                     case ModType.Tyres:
                         foreach(GameObject tyre in currentCarTyres)
                         {
                             currentCarRenderer = tyre.GetComponent<MeshRenderer>();
                             currentCarRenderer.material = carMod.modificationMat;
+                            costHandler.UpdateModificationCost(carMod, mod);
+                            currentSelectedTyres = carMod;
                         }
                         break;
                     case ModType.Glass:
                         currentCarRenderer = currentCarGlass.GetComponent<MeshRenderer>();
                         currentCarRenderer.material = carMod.modificationMat;
+                        costHandler.UpdateModificationCost(carMod, mod);
+                        currentSelectedGlass = carMod;
                         break;
                 }
                 
             });
+            OnPointerEnterExit pointerEvent = creation.GetComponent<OnPointerEnterExit>();
+            pointerEvent.PointerEnterDelegate += () =>
+            {
+                itemTitle.text = $"{carMod.carModificationName} - ${carMod.modficationPrice}";
+                itemDescription.text = $"{carMod.carModificationDescription}";
+            };
         }
     }
 

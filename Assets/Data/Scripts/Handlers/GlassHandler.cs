@@ -13,7 +13,7 @@ public class GlassHandler : MonoBehaviour
     private void Awake()
     {
         manager = FindObjectOfType<ApplicationManager>();
-        carGlassList = database.carTyreDatabase;
+        carGlassList = database.carGlassDatabase;
     }
 
     private void OnEnable()
