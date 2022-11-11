@@ -1,12 +1,18 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+public enum MenuType 
+{
+    CarModel,
+    CarExterior,
+    CarInteriror,
+    CarGlass,
+    CarTypes
+}
 
 public class ApplicationManager : MonoBehaviour
 {
@@ -25,8 +31,18 @@ public class ApplicationManager : MonoBehaviour
     [SerializeField] GameObject selectionPrefab;
     [Tooltip("The spawnpoint for car models")]
     [SerializeField] Transform carModelSpawnPoint;
-    [Tooltip("List of all selection menus")]
-    [SerializeField] List<GameObject> uiMenus;
+    [Space(10)]
+    [Tooltip("Menu of Car Models")]
+    [SerializeField] GameObject carModelMenu;
+    [Tooltip("Menu of Car Models")]
+    [SerializeField] GameObject carExteriorMenu;
+    [Tooltip("Menu of Car Models")]
+    [SerializeField] GameObject carInteriorMenu;
+    [Tooltip("Menu of Car Models")]
+    [SerializeField] GameObject carGlassMenu;
+    [Tooltip("Menu of Car Models")]
+    [SerializeField] GameObject carTyreMenu;
+    [Space(10)]
     [Tooltip("The starting active UI")]
     [SerializeField] GameObject currentUI;
     [Tooltip("The title text for hovering a selection")]
@@ -35,8 +51,10 @@ public class ApplicationManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI itemDescription;
     [Tooltip("Cost Handler script reliable for updating costs")]
     [SerializeField] CostHandler costHandler;
+    [Tooltip("Manager of the camera to change camera prio for different menus")]
+    [SerializeField] CameraManager cameraManager;
 
-    private int menuNumber = 0;
+    private MenuType selectedMenu = MenuType.CarModel;
 
     private GameObject currentCarModel;
     private GameObject currentCarExterior;
@@ -147,48 +165,46 @@ public class ApplicationManager : MonoBehaviour
 
     public void NextMenu()
     {
-        if (menuNumber == 4 || currentSelectedCar == null)
+        if (selectedMenu == MenuType.CarTypes || currentSelectedCar == null)
             return;
-        Debug.Log(menuNumber);
-        menuNumber++;
-        ChangeMenus(menuNumber);
+        selectedMenu++;
+        ChangeMenus(selectedMenu);
     }
 
     public void PreviousMenu()
     {
-        if (menuNumber == 0 || currentSelectedCar == null)
+        if (selectedMenu == MenuType.CarModel || currentSelectedCar == null)
             return;
-        Debug.Log(menuNumber);
-        menuNumber--;
-        ChangeMenus(menuNumber);
+        selectedMenu--;
+        ChangeMenus(selectedMenu);
     }
 
-    private void ChangeMenus(int menuNumber)
+    private void ChangeMenus(MenuType menu)
     {
         currentUI.SetActive(false);
-        Debug.Log(menuNumber);
-        switch(menuNumber)
+        switch(menu)
         {
-            case 0:
-                uiMenus[0].SetActive(true);
-                currentUI = uiMenus[0];
+            case MenuType.CarModel:
+                carModelMenu.SetActive(true);
+                currentUI = carModelMenu;
                 break;
-            case 1:
-                uiMenus[1].SetActive(true);
-                currentUI = uiMenus[1];
+            case MenuType.CarExterior:
+                carExteriorMenu.SetActive(true);
+                currentUI = carExteriorMenu;
                 break;
-            case 2:
-                uiMenus[2].SetActive(true);
-                currentUI = uiMenus[2];
+            case MenuType.CarInteriror:
+                carInteriorMenu.SetActive(true);
+                currentUI = carInteriorMenu;
                 break;
-            case 3:
-                uiMenus[3].SetActive(true);
-                currentUI = uiMenus[3];
+            case MenuType.CarGlass:
+                carGlassMenu.SetActive(true);
+                currentUI = carGlassMenu;
                 break;
-            case 4:
-                uiMenus[4].SetActive(true);
-                currentUI = uiMenus[4];
+            case MenuType.CarTypes:
+                carTyreMenu.SetActive(true);
+                currentUI = carTyreMenu;
                 break;
         }
+        cameraManager.ChangeCamera(menu);
     }
 }
