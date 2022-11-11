@@ -27,6 +27,9 @@ public class ApplicationManager : MonoBehaviour
     [HideInInspector]
     public CarModificationSO currentSelectedTyres;
 
+    [Tooltip("The canvas of all the UI elements.")]
+    [SerializeField] Canvas canvas;
+    [Space(10)]
     [Tooltip("The prefab of the button that is used to select an option")]
     [SerializeField] GameObject selectionPrefab;
     [Tooltip("The spawnpoint for car models")]
@@ -84,7 +87,7 @@ public class ApplicationManager : MonoBehaviour
             pointerEvent.PointerEnterDelegate += () =>
             {
                 itemTitle.text = $"{carModel.carName} - ${carModel.price}";
-                itemDescription.text = $"{carModel.carDescription}.{Environment.NewLine}{carModel.carStats}."; 
+                itemDescription.text = $"{carModel.carDescription}.{Environment.NewLine}{carModel.carStats}.";
             };
         }
     }
@@ -95,7 +98,7 @@ public class ApplicationManager : MonoBehaviour
         foreach (Transform carPart in carParts)
         {
             string carPartTag = carPart.gameObject.tag;
-            switch(carPartTag)
+            switch (carPartTag)
             {
                 case "CarBody":
                     currentCarExterior = carPart.gameObject;
@@ -115,7 +118,7 @@ public class ApplicationManager : MonoBehaviour
 
     public void PopulateModificationSelectionList(List<CarModificationSO> carModificationList, ModType mod, Transform content)
     {
-        foreach(CarModificationSO carMod in carModificationList)
+        foreach (CarModificationSO carMod in carModificationList)
         {
             GameObject creation = Instantiate(selectionPrefab, content);
             creation.GetComponentInChildren<TextMeshProUGUI>().text = carMod.carModificationName;
@@ -137,7 +140,7 @@ public class ApplicationManager : MonoBehaviour
                         currentSelectedInterior = carMod;
                         break;
                     case ModType.Tyres:
-                        foreach(GameObject tyre in currentCarTyres)
+                        foreach (GameObject tyre in currentCarTyres)
                         {
                             currentCarRenderer = tyre.GetComponent<MeshRenderer>();
                             currentCarRenderer.material = carMod.modificationMat;
@@ -152,7 +155,7 @@ public class ApplicationManager : MonoBehaviour
                         currentSelectedGlass = carMod;
                         break;
                 }
-                
+
             });
             OnPointerEnterExit pointerEvent = creation.GetComponent<OnPointerEnterExit>();
             pointerEvent.PointerEnterDelegate += () =>
@@ -182,7 +185,7 @@ public class ApplicationManager : MonoBehaviour
     private void ChangeMenus(MenuType menu)
     {
         currentUI.SetActive(false);
-        switch(menu)
+        switch (menu)
         {
             case MenuType.CarModel:
                 carModelMenu.SetActive(true);
@@ -207,4 +210,6 @@ public class ApplicationManager : MonoBehaviour
         }
         cameraManager.ChangeCamera(menu);
     }
+
+    public void ToggleCanvas() => canvas.gameObject.SetActive(!canvas.gameObject.activeSelf);
 }
